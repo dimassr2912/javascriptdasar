@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        // Destructuring array
+        const fullName = ["Dimas", "Setyawan", "Ramadhansyah", "Yoeshi", "Chaser"]
+        const [firstName, middleName, lastName] = fullName
+        const [firstName1, middleName2, lastName2, ...others] = fullName 
+
+        console.log(firstName)
+        console.log(middleName)
+        console.log(lastName)
+        console.log(others)
+
+        // Destructuring object
+        const person = {
+            Nama: "Rama", 
+            Alamat: {
+                Kec: "Kalasan",
+                Kota: "Sleman", 
+                Negara: "Indonesia"
+            },
+            Hobby: "Game", 
+            married: false
+        }
+
+        const {Nama, Alamat: {Kec, Kota, Negara}, ...lainnya} = person 
+        console.log(Nama)
+        console.log(Kec)
+        console.log(Kota)
+        console.log(Negara)
+        console.log(lainnya)
+
+        // Function object
+        // Tanpa destructuring
+        // function displayPerson(person2) {
+        //     console.log(firstName)
+        //     console.log(middleName)
+        //     console.log(lastName)
+        // }
+        function displayPerson({firstName, middleName, lastName}) {
+            console.log(firstName)
+            console.log(middleName)
+            console.log(lastName)
+        }
+
+        const person2 = {
+            firstName: "Dimas",
+            middleName: "Setyawan",
+            lastName: "Ramadhansyah"
+        }
+
+        displayPerson(person2)
+
+        // Tanpa destructuring
+        // function sum(array) {
+        //     return array[0] + array[1]
+        // }
+        
+        // console.log(sum([1, 2]))
+        // console.log(sum([3, 4]))
+
+        function sum([first, second]) {
+            return first + second
+        }
+
+        console.log(sum([1, 2]))
+        console.log(sum([3, 4]))
+
+        // Default value
+        {
+            const name = []
+            const [firstName, middleName = "Setyawan", lastName] = name 
+            console.log(firstName)
+            console.log(lastName)
+            console.log(lastName)
+        }
+        {
+            const person = {
+            firstName: "Dimas", 
+            lastName: "Ramadhansyah"
+        }
+
+        const {firstName, middleName = "Setya", lastName} = person 
+        console.log(firstName)
+        console.log(middleName)
+        console.log(lastName)
+        }
+
+        // Ubah dengan variable lain
+        {
+            const person = {
+            firstName: "Dimas", 
+            lastName: "Ramadhansyah"
+        }
+
+        const {firstName: namaDepan,
+            middleName: namaTengah= "Setya", lastName: namaBelakang} = person 
+        console.log(namaDepan)
+        console.log(namaTengah)
+        console.log(namaBelakang)
+        }
+    </script>
+</body>
+</html>
+<!-- 
+
+-->

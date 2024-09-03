@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For in</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName: "Dimas", 
+            middleName: "Setyawan",
+            lastName: "Ramadhansyah"
+        }
+     
+        for (const name in person) {
+            document.writeln(`<p>${name}: ${person[name]}</p>`)
+        }
+    </script>
+</body>
+</html>
+<!-- 
+    For in: Digunakan untuk iterasi property object atau index array
+        Tapi jarang digunakan untuk index array
+ -->

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function arrow</title>
+</head>
+<body>
+    <script>
+        const sayHello = (name) => {
+            console.log(`Hello ${name}`)
+        }
+
+        sayHello("Rama")
+
+        // Tanpa block (Harus 1 baris block)
+        const sayHello2 = (name) => console.log(`Hello ${name}`)
+        sayHello2("Rama")
+
+        // Tanpa block + return value 
+        const sayHello3 = (first, second) => first + second 
+
+        console.log(sayHello3(1, 2))
+
+        // Tanpa kurung parameter (Jika 1 parameter)
+        const sayHello4 = name => console.log(`Hello ${name}`)
+        sayHello4("Rama")
+
+        // Sebagai parameter 
+        function giveName (callback) {
+            callback("Dimas")
+        }
+
+        giveName(name => console.log(`Hello ${name}`))
+    </script>
+</body>
+</html>
+<!-- 
+    Arrow function:
+        Tidak bisa menggunakan function generator 
+        Tidak bisa mengakses this
+        Tidak bisa mengakses super
+-->

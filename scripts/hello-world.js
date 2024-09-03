@@ -1,0 +1,1 @@
+document.writeln("Hello World Include file") // statement

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Recursive</title>
+</head>
+<body>
+    <script>
+        // Tanpa recursive 
+        function factorial(value) {
+            if (value === 1) {
+                return 1
+            } else  {
+                return value * factorial(value - 1)
+            }
+        }
+
+        let result = factorial(5)
+        document.writeln(result)
+    </script>
+</body>
+</html>
+<!-- 
+    Function recursive: Kemampuan function memanggil dirinya sendiri
+    Contoh kasus: Faktorial
+ -->

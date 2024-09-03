@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Value</title>
+</head>
+<body>
+    <script>
+        function hello(name) {
+            document.writeln(`Hello ${name}`)
+        }
+
+        let say = hello
+        say("Dimas")
+        hello("Dimas")
+
+        function giveMeName(callback) {
+            callback("Dimas")
+        }
+
+        giveMeName(hello)
+        giveMeName(say)
+
+    </script>
+</body>
+</html>
+<!-- 
+    Bisa disimpan dalam variable
+        sehingga bisa dikirim ke parameter function lainnya
+ -->

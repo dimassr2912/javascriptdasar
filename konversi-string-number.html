@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konversi tipe data</title>
+</head>
+<body>
+    <script>
+        // Konversi string to number
+        const value1 = parseInt("1")
+        const value2 = 1 
+
+        const sum = value1 + value2
+        document.writeln(`<p> ${sum} </p>`)
+
+        document.writeln(`<p> ${parseInt("1.1")} </p>`)
+        document.writeln(`<p> ${parseFloat("1.1")} </p>`)
+        document.writeln(`<p> ${Number("1.1")} </p>`)
+
+        // Konversi number to string 
+        const a = 1
+        const b = 1
+        const result =  a.toString() + b.toString()
+
+        document.writeln(`<p> ${result}</p>`)
+
+        // NaN
+        document.writeln(`<p> ${parseInt("salah")} </p>`)
+        document.writeln(`<p> ${parseFloat("1.1salah")} </p>`)
+        document.writeln(`<p> ${Number("1salah")} </p>`)
+
+        const first = Number("Salah")
+        const total = first + 1
+
+        document.writeln(`<p> ${total} </p>`)
+
+        // isNaN()
+        document.writeln(`<p> ${isNaN(first)} </p>`)
+
+
+    </script>
+</body>
+</html>
+<!-- 
+    Function konversi:
+        parseInt(string): Konversi string ke number (Bilangan bulat)
+        parseFloat(string): Konversi string ke number (Bilangan desimal)
+        Number(string): Konversi string ke number (Bulat & desimal)
+        number.toString(): Konversi dari number ke string
+    Jika string + number = string
+    NaN: number spesial yang merupakan bukan number
+        Jika dioperasikan dengan number lain akan menghasilkan NaN
+        parseInt dan parseFloat mentolerir kesalahan dibelakang angka, number tidak
+    function isNaN(): Cek apakah sebuah number NaN
+        Hasil berupa boolean 
+ -->

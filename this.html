@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+            name: "Dimas", 
+            sayHello: function (name) {
+                // Untuk mengambil name dimas harus menggunakan this (person)
+                console.log(`Hello ${name}, my name is ${this.name}`)
+            }
+        }
+
+        person.sayHello("Rama")
+
+        // This Global scope 
+        console.log(this)
+
+        // This function
+        function sayHi(name) {
+            console.log(this)
+        }
+
+        sayHi("Rama")
+    </script>
+</body>
+</html>
+<!-- 
+    Kata kunci this adalah referensi ke object milik siapa
+        Di global scope dan function referensi ke global object (windows / browsernya)
+        Dalam object method, referensi ke object pemilik function 
+-->

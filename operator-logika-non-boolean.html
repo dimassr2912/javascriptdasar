@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator logika non boolean</title>
+</head>
+<body>
+    <script>
+        // OR
+        console.log("true" || "")    
+        console.log(undefined || 1)
+        console.log(undefined || null)
+
+        // AND
+        console.log("true" && "")    
+        console.log(undefined && 1)
+        console.log(undefined && null)
+
+    </script>
+</body>
+</html>
+<!-- 
+    OR: Mengambil nilai pertama yang truthy
+        Jika tidak ada akan mengambil yang terakhir
+    AND: Mengambil nilai pertama yang falsy
+        Jika tidak ada akan mengambil yang terakhir 
+ -->

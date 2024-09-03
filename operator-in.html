@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In Operator</title>
+</head>
+<body>
+    <script>
+        const person = {
+            "Name": "Dimas", 
+            Age: undefined
+        }
+
+        const result = "Name" in person 
+        console.log(result)
+
+        const result2 = "Age" in person
+        console.log(result2)
+    </script>
+</body>
+</html>
+<!-- 
+    In operator: Digunakan untuk cek property pada sebuah object
+    Walaupun null / undefined, tetap bernilai true jika ada propertynya
+ -->

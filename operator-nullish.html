@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nullish Coalescing Operator</title>
+</head>
+<body>
+    <script>
+        // Tanpa nullish
+        let parameter
+        let data = parameter
+
+        if (data === null || data === undefined) {
+            data = "Nilai default"
+        }
+
+        // Nullish
+        let parameter2 
+        let data2 = parameter2 ?? "Nilai default"
+
+        console.log(data2)
+
+        
+    </script>
+</body>
+</html>
+<!-- 
+    Nullish value adalah null dan undefined
+
+ -->

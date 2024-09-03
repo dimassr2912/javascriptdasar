@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Generator</title>
+</head>
+<body>
+    <script>    
+        function* createNames() {
+            yield "Dimas";
+            yield "Setyawan";
+            yield "Ramadhansyah";
+        }    // Seakan akan memiliki array dengan 3 data
+
+        const names = createNames()
+        for (name of names) {
+            document.writeln(name)
+        }
+
+        document.writeln(names[0]) // Bisa di iterasi tetapi tidak bisa di akses dengan index 
+
+        // Lazy
+        function* buatGanjil(value) {
+            for (let i = 0; i < value; i++) {
+                if (i % 2 === 1) {
+                    console.log(`Yield ${i}`)
+                    yield i
+                }
+            }
+        } // Tidak akan langsung di eksekusi yieldnya
+
+        // Eager
+        function buatArrayGanjil(value) {
+            const result = [] 
+            for (let i = 0; i < value; i++) {
+                if (i % 2 === 1) {
+                    console.log(`Yield ${i}`)
+                    result.push(i)
+                }
+                }
+            return result
+        } // Akan dieksekusi langsung consolenya
+        const angkaGanjil = buatGanjil(20)
+        // for (angka of angkaGanjil) {
+        //    console.log(angka)
+        // }
+        // Function bawaan generator 
+        console.log(angkaGanjil.next().value)
+    </script>
+
+</body>
+</html>
+<!-- 
+    Function generator: Function untuk membuat data generator
+        Data bisa diiterasi seperti array
+        Bersifat lazy
+-->

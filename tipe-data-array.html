@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        // Membuat array
+        let arrayKosong = []
+        let arrayIsi = ["Dimas", "Setyawan", "Ramadhansyah", 1 , true]
+
+        // Tambah array
+        const names = []
+        names.push("Sunny", 24)
+
+        console.table(names)
+
+        // Mendapatkan panjang array
+        console.log(names.length)
+
+        // Mendapatkan data di posisi index
+        console.log(names[0])
+
+        // Ubah data di posisi index
+        names[0] = "Rama"
+        console.table(names)
+
+        // Hapus data
+        delete names[0]
+        console.table(names)
+
+        names[0] = "ada lagi"
+        console.table(names)
+
+    </script>
+</body>
+</html>
+<!-- 
+    Array: Tipe data yang berisikan kumpulan data
+    function array:
+        array.push(value): Tambah data ke array
+        array.length: Mendapatkan panjang array
+        array[index]: Mendapatkan data posisi index
+        array[index] = value: Mengubah data di posisi index
+        delete array[index]: Hapus data di posisi index, tetapi index tidak bergeser
+ -->

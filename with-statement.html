@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=j, initial-scale=1.0">
+    <title>With Statement</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName: "Dimas", 
+            lastName: "Ramadhansyah"
+        }
+        let firstName = "Ira"
+
+        with (person) {
+            document.writeln(firstName)
+            document.writeln(lastName)
+            // Tidak bisa mengambil variable firstName berisi ira
+        }
+    </script>
+</body>
+</html>
+<!-- 
+    Tidak digunakan karena membuat ambigu
+-->

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Template</title>
+</head>
+<body>
+    <script>
+        let name = "Dimas Setyawan Ramadhansyah"
+        let temp = `Name: ${name}`
+
+        console.log(temp)
+
+        // Expression di string template
+        let nilai = 80
+        temp = `Name: ${name}, lulus: ${nilai > 75}`
+        
+        console.log(temp)
+
+        // Multiline string 
+        let message = `
+        Nama saya adalah
+        Dimas Setyawan Ramadhansyah`
+
+        document.writeln("<pre>")
+        document.writeln(message)
+        document.writeln("</pre>")
+    </script>
+</body>
+</html>
+<!-- 
+    String template: Subtitusi data dari luar string ke dalam string
+        Digunakan untuk mengambil variable dan operasi matematika
+        Menggunakan backtick ``
+        Bisa digunakan untuk multiline string
+ -->

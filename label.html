@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Label</title>
+</head>
+<body>
+    <script>
+        loopI: 
+        for(let i = 0; i < 10; i++) {
+            loopJ: 
+            for(let j = 0; j < 100; j++) {
+                if (j > 10) {
+                    continue loopI
+                }
+                document.writeln(`<p>${i}-${j}</p>`)
+            }
+        }
+    </script>
+</body>
+</html>
+<!-- 
+    Label: Bisa melakukan break dan continue di perulangan yang kita inginkan
+ -->

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Optional Chaining</title>
+</head>
+<body>
+    <script>
+       // Tanpa optional chaining
+        const person = {}
+        let country 
+
+        if (person.address !== null && person.address !== undefined) {
+            country = person.address.country
+        }
+
+        // Optional chaining
+        const person2 = {
+        }
+        let country2 
+
+        document.writeln(person2?.address?.country) // Jika nullish di awal langsung menampilkan undefined
+    </script>
+</body>
+</html>
+<!-- 
+    Optional Chaining: Operator untuk mengamankan ketika akses property object dari data nullish
+ -->

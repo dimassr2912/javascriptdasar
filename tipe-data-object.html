@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tipe data Object</title>
+</head>
+<body>
+    <script>
+        const objectKosong = {}
+
+        // Ubah tambah property / attribute
+        const person = {}
+
+        person["nama"] = "Rama" 
+        person["umur"] = 25
+
+        console.table(person)
+
+        // Hapus data
+        delete person["nama"]
+        console.table(person)
+
+        // Membuat object dengan properties
+        const siswa = {
+            nama : "Dimas",
+            "alamat rumah" : "Indonesia"
+        }
+
+        // Mengubah properties
+        siswa["nama"] = "Rama"
+
+        console.table(siswa)
+
+        // Akses property object
+        console.log(`Nama: ${siswa.nama}`)
+        console.log(`Alamat rumah: ${siswa["alamat rumah"]}`)
+    </script>
+</body>
+</html>
+<!-- 
+    Object: Index bisa menggunakan selain number
+        Index biasanya disebut attribute / properties
+ -->

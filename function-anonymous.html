@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Anonymous</title>
+</head>
+<body>
+    <script>
+        // Variable
+        const say = function (name) {
+            document.writeln(`Hello ${name}`)
+        }
+        say("Rama")
+
+        // Parameter
+        function giveName(callback) {
+            callback("Rama")
+        }
+
+        giveName(function (name) {
+            document.writeln(`Hi ${name}`)
+        })
+    </script>
+</body>
+</html>
+<!-- 
+    Anonymous function: Membuat function tanpa nama
+        Bisa membuat function di dalam variable atau mengisi parameter
+ -->

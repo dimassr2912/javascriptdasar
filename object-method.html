@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sayHi (name) {
+            console.log(`Hi ${name}`)
+        }
+        const person = {
+            name: "Dimas", 
+            sayHello : function (name) {
+                console.log(`Hello ${name}`)
+            },
+            sayHi : sayHi
+        }
+
+        // Akses property object
+        person.sayHello("Rama")
+        person.sayHi("Rama")
+
+        // Menambahkan property
+        person.sayBye = function (name) {
+            console.log(`Bye ${name}`)
+        }
+
+        person.sayBye("Rama")
+    </script>
+</body>
+</html>
+<!-- 
+    Function juga merupakan tipe data
+    Function bisa ditambahkan ke object disebut dengan object method
+-->

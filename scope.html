@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        // Global scope
+        let counter = 0
+
+        function hitMe() {
+            // Local scope hitMe
+            counter++ 
+        }
+
+        hitMe()
+        document.writeln(counter)
+
+        function first() {
+            // Local scope
+            let firstVariable = "first"
+        }
+        function second() {
+            let secondVariable= "second"
+        }
+
+        first()
+        second()
+
+        // Tidak bisa karena variable berada di local scope function 
+        // console.log(firstVariable)
+        // console.log(secondVariable)
+
+        // Nested
+        function satu() {
+            let satuVariable = "Satu"
+
+            function dua() {
+                console.log(satuVariable)
+            }
+            dua()
+        }
+        satu()
+    </script>
+</body>
+</html>
+<!-- 
+    Scope: Area akses sebuah data
+    Dua jenis scope:
+        Global scope
+        Local scope
+ -->

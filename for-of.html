@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For of</title>
+</head>
+<body>
+    <script>
+        // array
+        const names = ["Dimas", "Setyawan", "Ramadhansyah"]
+
+        for (const name of names) {
+            document.writeln(`${name}`)
+        }
+
+        // Iterasi string
+        const nama = "Dimas Setyawan Ramadhansyah"
+
+        for (const namaku of nama) {
+            document.writeln(`<p> ${namaku} </p>`)
+        }
+    </script>
+</body>
+</html>
+<!-- 
+    For of: Dapat melakukan iterasi terhadap value dari iterable object (array, string)
+        Tidak dapa dilakukan pada object karena object bukan iterable
+ -->
